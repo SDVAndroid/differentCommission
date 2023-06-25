@@ -14,7 +14,7 @@ fun calcCommission(systemPay: String = "VK Pay", previousAmount: Int = 0, transf
         "Mastercard", "Maestro", "Visa", "Мир" -> if (previousAmount <= 600_000 && transferAmount <= 150_000) {
             when (systemPay) {
                 "Mastercard", "Maestro" -> commission =
-                    if (previousAmount < 75_000) 0.0 else (transferAmount * 0.006) + 20.0
+                    if ((previousAmount + transferAmount) < 75_000) 0.0 else (transferAmount * 0.006) + 20.0
 
                 "Visa", "Мир" -> commission = if (transferAmount * 0.0075 < 35.0) 35.0 else 0.0075 * transferAmount
             }
