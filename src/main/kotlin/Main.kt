@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    val sumCommission = calcCommission("Visa", 75000, 75000.0)
+    val sumCommission = calcCommission("Mastercard", 74000, 75000.0)
     if (sumCommission == -1.0) {
     println("Лимит превышен")
     } else {
