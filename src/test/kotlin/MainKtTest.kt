@@ -10,7 +10,7 @@ class MainKtTest {
         val previousAmount = 500_000
         val transferAmount = 150_000.10
         val result = calcCommission(systemPay, previousAmount, transferAmount)
-        assertEquals(-1.0, result, 0.01)
+        assertEquals(0.0, result, 0.01)
     }
 
     @Test
